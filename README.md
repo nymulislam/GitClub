@@ -19,13 +19,6 @@
 
 ## 📝 Main Requirements
 
-## 🎨 Design Part
-
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
-
 ## Main Page: 
 
 ### Navbar: 
