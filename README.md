@@ -18,30 +18,10 @@
 ---
 
 ## 📝 Main Requirements
-
-## Main Page: 
-
-### Navbar: 
-
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
-
-
 --- 
 
 
 ## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
-
-- Load all issues and display as per Figma
 
 - On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
 
@@ -53,12 +33,8 @@
   - Priority
   - Label
   - CreatedAt
-- Clicking on an issue  card will open a modal and show all the information about that Issue. 
 
 ### 🚀 Challenges
-
-
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
 
 - Loading spinner on data load
 
@@ -73,15 +49,6 @@
     - 4️⃣ What is an arrow function?
     - 5️⃣ What are template literals?
 
-
-
----
-
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
 
 
 
