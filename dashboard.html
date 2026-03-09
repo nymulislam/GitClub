@@ -87,12 +87,12 @@
             <div class="flex gap-8 text-sm font-semibold text-[#334155]">
 
                 <div class="flex items-center gap-2">
-                    <div class="bg-green-500 h-4 w-4 rounded-full"></div>
+                    <div class="bg-green-500 h-2 w-2 rounded-full"></div>
                     <p>Open</p>
                 </div>
 
                 <div class="flex items-center gap-2">
-                    <div class="bg-red-500 h-4 w-4 rounded-full"></div>
+                    <div class="bg-red-500 h-2 w-2 rounded-full"></div>
                     <p>Closed</p>
                 </div>
 
@@ -107,6 +107,50 @@
 
     </div>
 
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box space-y-4">
+            <h3 id="modal-title" class="text-lg font-bold">Fix broken image uploads</h3>
+            <div>
+                <ul class="flex gap-8 text-sm">
+                    <div id="modal-status" class="badge badge-success badge-soft">Opened</div>
+                    <li id="modal-openedBy" class="list-disc">Opened by John Doe</li>
+                    <li id="modal-updated-at" class="list-disc">22/2/2023</li>
+                </ul>
+            </div>
+            <div>
+                <div class="badge badge-outline border-[#d4a373] text-[#d4a373] font-semibold">
+                   <i class="fa-solid fa-bug"></i> bug
+                </div>
+                <div class="badge badge-outline border-[#14b8a6] text-[#14b8a6] font-semibold">
+                    <i class="fa-solid fa-futbol"></i>help wanted
+                </div>
+            </div>
+
+            <p id="modal-description" class="py-4">Press ESC key or click the button below to close</p>
+
+            <div class="flex items-center justify-between bg-[#fff7ed] p-5 rounded-md">
+                <div class="space-y-2">
+                    <h2 class="text-sm text-gray-500">Assignee:</h2>
+                    <p id="modal-assignee" class="font-bold text-lg">
+                        Fahim Ahmad
+                        </p>
+                </div>
+                <div class="space-y-2">
+                    <h2 class="font-bold text-lg">Priority:</h2>
+                    <p id="modal-priority" class="badge bg-[#d4a373] text-white font-semibold">
+                        High
+                        </p>
+                </div>
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn bg-[#d4a373] hover:bg-[#c48f5c] text-white px-4 py-2 rounded-md font-semibold">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
     <script src="dashboard.js"></script>
 
 </body>
