@@ -18,24 +18,30 @@ document.addEventListener('click', (e) => {
     const assignee = issueCard.dataset.assignee;
     const priority = issueCard.dataset.priority;
     const status = issueCard.dataset.status;
-    const labels = issueCard.dataset.labels.split(', ');
+    const createdAt = issueCard.dataset.created;
 
     document.getElementById('modal-title').innerText = title;
     document.getElementById('modal-description').innerText = description;
     document.getElementById('modal-assignee').innerText = `${assignee}`;
     document.getElementById('modal-openedBy').innerText = `Opened by ${assignee}`;
+    document.getElementById('modal-updated-at').innerText = `${createdAt.slice(0, 10)}`;
 
     const showPriority = document.getElementById('modal-priority');
     showPriority.innerText = priority;
+
     priority === 'high' ? showPriority.classList.add('bg-red-700') : priority === 'medium' ? showPriority.classList.add('bg-yellow-500') : showPriority.classList.add('bg-green-500');
 
-    document.getElementById('modal-status').innerText = `${status}`;
+    const showStatus = document.getElementById('modal-status');
+    showStatus.innerText = `${status}`;
 
-    console.log(title, description, assignee, priority, status, labels);
+    showStatus.classList.toggle('bg-green-500', status === 'open')
+    showStatus.classList.toggle('bg-red-500', status === 'closed') ;
 
     modal.showModal();
 });
 
+
+// Issues Display
 function issuesDisplay(issues) {
     const issuesCount = document.getElementById('issues-count');
     issuesCount.innerText = `${issues.data.length} Issues`;
@@ -43,7 +49,6 @@ function issuesDisplay(issues) {
     issuesContainer.innerHTML = '';
     issues.data.forEach(issue => {
 
-        // console.log(issue.labels);
         const issueElement = document.createElement('div');
         issueElement.innerHTML = `
             <div class="hover-3d issue-card"
@@ -52,7 +57,7 @@ function issuesDisplay(issues) {
             data-assignee="${issue.assignee}"
             data-priority="${issue.priority}"
             data-status="${issue.status}"
-            data-labels="${issue.labels.join(', ')}"
+            data-created="${issue.createdAt}"
             >
 
             <div class="card shadow-lg h-90 border-t-4 ${issue.status === 'open' ? 'border-[#14b8a6]' : 'border-purple-500'} bg-white">
