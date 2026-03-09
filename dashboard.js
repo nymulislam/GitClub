@@ -29,7 +29,9 @@ document.addEventListener('click', (e) => {
     const showPriority = document.getElementById('modal-priority');
     showPriority.innerText = priority;
 
-    priority === 'high' ? showPriority.classList.add('bg-red-700') : priority === 'medium' ? showPriority.classList.add('bg-yellow-500') : showPriority.classList.add('bg-green-500');
+    showPriority.classList.toggle('bg-red-700', priority === 'high');
+    showPriority.classList.toggle('bg-yellow-500', priority === 'medium');
+    showPriority.classList.toggle('bg-green-500', priority === 'low');
 
     const showStatus = document.getElementById('modal-status');
     showStatus.innerText = `${status}`;
