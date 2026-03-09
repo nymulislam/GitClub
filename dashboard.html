@@ -26,19 +26,19 @@
 
 <body class="bg-[#f8fafc]">
 
-    <nav class="container mx-auto rounded-md px-6 py-3 bg-[#1e293b] shadow-lg flex items-center justify-between">
+    <nav class="container mx-auto rounded-md px-3 py-2 md:px-6 md:py-3 bg-[#1e293b] shadow-lg flex items-center justify-between">
 
         <div class="flex items-center gap-4">
             <img src="assets/logo.png" alt="GitClub Logo" class="h-12">
-            <h1 class="text-2xl font-bold text-white">GitClub Issues Tracker</h1>
+            <h1 class="text-sm md:text-2xl hidden md:block font-bold text-white">GitClub Issues Tracker</h1>
         </div>
 
         <form class="flex gap-2 items-center">
             <input type="search" placeholder="Search issues..."
-                class="w-40 md:w-60 px-4 py-2 rounded-md bg-[#334155] text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6]" />
+                class="w-36 md:w-60 px-4 py-2 rounded-md bg-[#334155] text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6]" />
 
             <button class="bg-[#d4a373] hover:bg-[#c48f5c] text-white px-4 py-2 rounded-md font-semibold">
-                <i class="fa-solid fa-plus mr-1"></i>Search
+                <span class="hidden md:block"><i class="fa-solid fa-plus mr-1"></i></span>Search
             </button>
         </form>
 
@@ -67,13 +67,13 @@
     <!-- Main Content -->
     <div class="container mx-auto px-5 shadow-md p-6 rounded-md bg-white border border-gray-200">
 
-        <div class="flex justify-between items-center mb-6 p-5 rounded-md border border-[#d4a373] bg-[#fff7ed]">
+        <div class="flex flex-col-reverse md:flex-row justify-between items-center mb-6 p-5 gap-2 rounded-md border border-[#d4a373] bg-[#fff7ed]">
 
             <div class="flex items-center gap-4">
                 <img src="assets/Aperture.png" class="h-10 rounded-full p-1 bg-purple-400/15" />
 
                 <div>
-                    <h1 id="issues-count" class="text-[#14b8a6] text-xl font-bold">
+                    <h1 id="issues-count" class="text-[#14b8a6] text-lg md:text-xl font-bold">
 
                     </h1>
 
@@ -90,7 +90,6 @@
                     <div class="bg-green-500 h-2 w-2 rounded-full"></div>
                     <p>Open</p>
                 </div>
-
                 <div class="flex items-center gap-2">
                     <div class="bg-red-500 h-2 w-2 rounded-full"></div>
                     <p>Closed</p>
